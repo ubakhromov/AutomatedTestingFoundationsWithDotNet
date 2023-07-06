@@ -50,7 +50,8 @@
                 {
                     Console.WriteLine("Bus:");
                     Console.WriteLine($"Operator: {bus.Operator}");
-                    Console.WriteLine($"Number of Passengers: {bus.NumberOfPassengers}");
+                    Console.WriteLine(
+                        $"Number of Passengers: {bus.NumberOfPassengers}");
                 }
                 else if (vehicle is Scooter scooter)
                 {

@@ -7,7 +7,10 @@
         public string Type { get; set; }
         public string SerialNumber { get; set; }
 
-        public Engine(int power, double volume, string type, string serialNumber)
+        public Engine(int power,
+            double volume, 
+            string type,
+            string serialNumber)
         {
             Power = power;
             Volume = volume;
