@@ -7,13 +7,18 @@
 
         public Coordinate CurrentPosition { get; set; }
 
-        public void FlyTo(Coordinate destination) //the bird flies the entire distance at a constant speed in the range of 0-20 km/h
+        public void FlyTo(Coordinate destination) 
         {
-            double distance = distanceCalculator.CalculateDistance(CurrentPosition, destination);
-            TimeSpan flightTime = distanceCalculator.CalculateFlightTime(distance, MaxSpeedKmPerHour);
+            //the bird flies the entire distance at a constant speed in the range of 0-20 km/h
 
-            Console.WriteLine(
-                $"Flying from ({CurrentPosition.X}, {CurrentPosition.Y}, {CurrentPosition.Z}) to " +
+            double distance = distanceCalculator.
+                CalculateDistance(CurrentPosition, destination);
+
+            TimeSpan flightTime = distanceCalculator.
+                CalculateFlightTime(distance, MaxSpeedKmPerHour);
+
+            Console.WriteLine($"Flying from ({CurrentPosition.X}," +
+                $" {CurrentPosition.Y}, {CurrentPosition.Z}) to " +
                 $"({destination.X}, {destination.Y}, {destination.Z})");
 
             Console.WriteLine($"Estimated flight time: {flightTime}");
@@ -22,8 +27,12 @@
 
         public TimeSpan GetFlightTime(Coordinate destination)
         {
-            double distance = distanceCalculator.CalculateDistance(CurrentPosition, destination);
-            TimeSpan flightTime = distanceCalculator.CalculateFlightTime(distance, MaxSpeedKmPerHour);
+            double distance = distanceCalculator.
+                CalculateDistance(CurrentPosition, destination);
+
+            TimeSpan flightTime = distanceCalculator.
+                CalculateFlightTime(distance, MaxSpeedKmPerHour);
+
             return flightTime;
         }
     }
