@@ -1,25 +1,15 @@
 ﻿namespace AutomatedTestingFoundationsWithDotNet
 {
-    public class Truck
+    public class Truck : Vehicle
     {
-        public string Brand { get; set; }
-        public string Model { get; set; }
-        public Engine Engine { get; set; }
-        public Chassis Chassis { get; set; }
-        public Transmission Transmission { get; set; }
+        public string Manufacturer { get; set; }
+        public double CargoCapacity { get; set; }
 
-        public Truck(string brand, string model, Engine engine, Chassis chassis, Transmission transmission)
+        public Truck(string manufacturer, double cargoCapacity, Engine engine, Chassis chassis, Transmission transmission)
+            : base(engine, chassis, transmission)
         {
-            Brand = brand;
-            Model = model;
-            Engine = engine;
-            Chassis = chassis;
-            Transmission = transmission;
-        }
-
-        public override string ToString()
-        {
-            return $"Truck:\nBrand: {Brand}\nModel: {Model}\n{Engine}\n{Chassis}\n{Transmission}";
+            Manufacturer = manufacturer;
+            CargoCapacity = cargoCapacity;
         }
     }
 }
