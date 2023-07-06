@@ -1,12 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AutomatedTestingFoundationsWithDotNet
+﻿namespace AutomatedTestingFoundationsWithDotNet
 {
-    internal class Bus
+    public class Bus
     {
+        public string Brand { get; set; }
+        public string Model { get; set; }
+        public Engine Engine { get; set; }
+        public Chassis Chassis { get; set; }
+        public Transmission Transmission { get; set; }
+
+        public Bus(string brand, string model, Engine engine, Chassis chassis, Transmission transmission)
+        {
+            Brand = brand;
+            Model = model;
+            Engine = engine;
+            Chassis = chassis;
+            Transmission = transmission;
+        }
+
+        public override string ToString()
+        {
+            return $"Bus:\nBrand: {Brand}\nModel: {Model}\n{Engine}\n{Chassis}\n{Transmission}";
+        }
     }
 }
