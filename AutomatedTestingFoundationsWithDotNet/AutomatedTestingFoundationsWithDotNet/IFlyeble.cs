@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AutomatedTestingFoundationsWithDotNet
+﻿namespace AutomatedTestingFoundationsWithDotNet
 {
-    internal interface IFlyeble
+    public interface IFlyeble
     {
+        void FlyTo(Coordinate destination);
+        TimeSpan GetFlightTime(Coordinate destination);
     }
 }
